@@ -1,0 +1,32 @@
+spring:
+  profiles: dev
+  application:
+    name: ribbon
+# port
+server:
+  port: 8766
+  servlet:
+    context-path: /ribbon
+
+#eureka注册中心 向注册中心注册服务
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+#hystrix配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6200
+#ribbon
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 2000
+#feign
+feign:
+  hystrix:
+    enabled: true #开启hystrix熔断策略

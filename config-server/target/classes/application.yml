@@ -1,0 +1,19 @@
+# port
+server:
+  port: 8759
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native #加载本地配置
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+
+# Logging
+logging:
+  file: logs/config-server.log
+

@@ -1,0 +1,8 @@
+# config center
+spring:
+  cloud:
+    config:
+      name: eureka-client2 # 需要读取的资源名称 注意没有yml
+      profile: dev # 本次访问的配置项
+      label:  master
+      uri:  http://localhost:8759 #本资源微服务启动后先去找8759号服务，通过SpringCloudConfig获取Github的服务地址

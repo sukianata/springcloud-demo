@@ -1,0 +1,25 @@
+spring:
+  profiles: dev
+  application:
+    name: eureka-client #该值会作为服务名向Eureka注册
+# port
+server:
+  port: 8761
+#  servlet:
+#    context-path: /eureka-client
+
+#eureka注册中心 向注册中心注册服务
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+#hystrix配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
