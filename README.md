@@ -99,7 +99,7 @@ eureka:
    
 >启动类上需要添加注解@EnableEurekaClient  
 
-&ensp;&ensp;客户端相关依赖:  
+&ensp;&ensp;客户端相关配置:
 
 <pre>
 spring:
