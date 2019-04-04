@@ -250,6 +250,6 @@ zuul:
 实现自定义的过滤器可以通过继承ZuulFilter来实现，需要重写四个方法。方法部分说明见demo中注解。
   
 ### **七、总结**   
-   
+* 同一个项目可能同时扮演多个角色，比如既是Config客户端，又是Eureka客户端，还是Zuul,所以依赖引入和配置需要根据实际情况配合使用，灵活使用；  
 * SpringCloud生态中，各个不同版本间存在很多兼容性问题中，例如：F版本SpringCloud的Zuul和SpringBoot 2.1.x不兼容，有时遇见exception时可以考虑往这个方向尝试；
 * 依赖引入和配置问题，spring配置文件的属性颇多，可以上官网[https://spring.io/docs](https://spring.io/docs)查看API来查看属性的含义以及需要哪些属性，参考[Spring Boot配置文件规则以及使用方法官方文档查找以及Spring项目的官方文档查找方法](https://www.cnblogs.com/EasonJim/p/7522224.html)
